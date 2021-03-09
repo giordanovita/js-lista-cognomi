@@ -62,17 +62,17 @@
         //Riordinare l'array e stampare la lista dei cognomi in ordine alfabetico e la posizione "umana" (partendo da 1) del cognome dell'utente.
 
         var arr = ['Rossi', 'Dipali', 'Vita', 'Alberi', 'Gusti', 'Faoli'];
+        var lastName = prompt( 'Digita il tuo cognome').toUpperCase();
+        arr.push(lastName);
+        arr.sort();
         
         var str = String(arr).toUpperCase().split(",");
             
-            var lastName = prompt( 'Digita il tuo cognome').toUpperCase();
-            str.push(lastName);
-           
           for (let i = 0; i < arr.length; i++) {
-              var arrOrd = str.sort();
+              //var arrOrd = str.sort();
           
               if (str[i] === lastName) {
-                  console.log('Cognome:'+ (str[i]) , 'Posizione "umana":' + ( i + 1));
+                  console.log('Cognome:'+ lastName , 'Posizione "umana":' + ( i + 1));
                   } else {
                       console.log('Cognome:'+ str[i]);
                   }  
